@@ -1,0 +1,235 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		
+		// Atividade 1
+		/*float convC, convF, convK;
+		System.out.println("Digite uma temperatura");
+		float temp = Float.parseFloat(sc.nextLine());
+		
+		System.out.print("Digite a unidade de medida. C - Celsius | F - Fahrenheit | K - Kelvin");
+		String med = sc.nextLine();
+		
+		switch(med) {
+		case "C":
+			convF = temp * 1.8f + 32;
+			convK = temp + 273.15f;
+			System.out.println("O valor em Fahrenheit é: " + convF);
+			System.out.println("O valor em Kelvin é: "+ convK);
+			break;
+		case "F":
+			convC = (temp - 32) / 1.8f;
+			convK = (((temp - 32) * 5) / 9) + 273.15f;
+			System.out.println("O valor em Celsius é: " + convC);
+			System.out.println("O valor em Kelvin é: "+ convK);
+			break;
+		case "K":
+			convC = temp - 273.15f;
+			convF = (temp * 1.8f) - 459.67f;
+			System.out.println("O valor em Celsius é: " + convC);
+			System.out.println("O valor em Fahrenheit é: "+ convF);
+			break;
+		default:
+			System.out.println("Informe uma medida válida!");
+			break;
+		}*/
+		
+		// Atividade 2
+		/*int soma = 0, resto = 0;
+		System.out.println("Digite um número");
+		int num = sc.nextInt();
+		
+		while(num > 0) {
+			resto = num% 10;
+			soma += resto;
+			num /= 10;
+		}
+		
+		System.out.println("A soma dos digitos é: " + soma);
+		*/
+		
+		// Atividade 3
+		/* int dia,mes,ano, diasMes=0, totalDias=0;
+	     boolean bissexto =true;
+	     
+	     System.out.println("Digite o dia:");
+	     dia = sc.nextInt();
+	     System.out.println("Digite o mês:");
+	     mes = sc.nextInt();
+	     System.out.println("Digite o ano:");
+	     ano = sc.nextInt();
+	     
+	     bissexto = (ano % 4 ==0 && ano % 100 !=0) || (ano % 400 == 0);
+	     
+	     if(mes < 1 && mes > 12){
+	           System.out.println("Mês inválido");
+	       }
+	       else
+	       {
+	           if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+	               diasMes = 31;
+	           } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
+	               diasMes = 30;
+	           } else{
+	               if(bissexto)
+	                   diasMes = 29;
+	               else
+	                   diasMes= 28;
+	           }
+
+	           if (dia < 1 && dia > diasMes )
+	           {
+	               System.out.println("Dia inválido!");
+	           }
+	           else
+	           {
+	               for(int i=1; i<mes;i++)
+	               {
+	                   if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12)
+	                   {
+	                       totalDias += 31;
+
+	                   } else if (i == 4 || i == 6 || i == 9 || i == 11){
+	                       totalDias += 30;
+
+	                   } else{
+	                       if(bissexto)
+	                           totalDias += 29;
+	                       else
+	                           totalDias += 28;
+	                   }
+	               }
+	               totalDias+= dia;
+	               System.out.println("Dias desde 1º de janeiro: " + totalDias);
+
+	           }
+	       }*/
+		
+		// Atividade 4
+		/*double PI = 3.14159;
+        double raio,base,altura,area;
+        int op;
+        System.out.println("CÁLCULO DE ÁREA DAS FORMAS PLANAS");
+        System.out.println("1- Calcular Círculo: ");
+        System.out.println("2- Calcular Triângulo: ");
+        System.out.println("3- Calcular Quadrado: ");
+        System.out.println("4- Calcular Retângulo: ");
+        System.out.println("Digite a sua opção: ");
+        op = sc.nextInt();
+        switch (op) {
+
+            case 1:
+                System.out.println("Digite o raio do círculo:");
+                raio = sc.nextDouble();
+                area = PI * Math.pow(raio, 2);
+                System.out.println("Área do círculo é: " + area);
+                break;
+            case 2:
+                System.out.println("Digite o base do triângulo: ");
+                base = sc.nextDouble();
+                System.out.println("Digite a altura do triângulo: ");
+                altura = sc.nextDouble();
+                area = (base * altura) / 2;
+                System.out.println("Área do triângulo é: " + area);
+                break;
+            case 3:
+                System.out.println("Digite o lado do quadrado:");
+                altura = sc.nextDouble();
+                area = Math.pow(altura, 2);
+                System.out.println("Área do quadrado é: " + area);
+                break;
+            case 4:
+                System.out.println("Digite a base do retângulo:");
+                base = sc.nextDouble();
+                System.out.println("Digite a altura do retângulo:");
+                altura = sc.nextDouble();
+                area = base * altura;
+                System.out.println("Área do círculo é: " + area);
+                break;
+        }*/
+		
+		// Atividade 5
+		/*double valor;
+        int notas, moedas, notas100, notas50, notas20, notas10, notas5, notas2, moedas1, moedas50, moedas25, moedas10, moedas5, moedas01;
+        System.out.println("Digite o valor a decompor:");
+        valor = sc.nextDouble();
+        notas = (int) Math.round(valor * 100);
+
+        notas100 = notas / 10000;
+        notas %= 10000;
+        notas50 = notas / 5000;
+        notas %= 5000;
+        notas20 = notas / 2000;
+        notas %= 2000;
+        notas10 = notas / 1000;
+        notas %= 1000;
+        notas5 = notas / 500;
+        notas %= 500;
+        notas2 = notas / 200;
+        notas %= 200;
+
+        moedas = notas;
+        moedas1 = moedas/100;
+        moedas %= 100;
+        moedas50 = moedas / 50;
+        moedas %= 50;
+        moedas25 = moedas / 25;
+        moedas %= 25;
+        moedas10 = moedas / 10;
+        moedas %= 10;
+        moedas5 = moedas / 5;
+        moedas %= 5;
+        moedas01 = moedas;
+
+        if (notas100 > 0) System.out.println(notas100 + " nota(s) de 100");
+        if (notas50 > 0) System.out.println(notas50 + " nota(s) de 50");
+        if (notas20 > 0) System.out.println(notas20 + " nota(s) de 20");
+        if (notas10 > 0) System.out.println(notas10 + " nota(s) de 10");
+        if (notas5 > 0) System.out.println(notas5 + " nota(s) de 5");
+        if (notas2 > 0) System.out.println(notas2 + " nota(s) de 2");
+
+        if (moedas1 > 0) System.out.println(moedas1 + " moeda(s) de 1 real");
+        if (moedas50 > 0) System.out.println(moedas50 + " moeda(s) de 50 centavos");
+        if (moedas25 > 0) System.out.println(moedas25 + " moeda(s) de 25 centavos");
+        if (moedas10 > 0) System.out.println(moedas10 + " moeda(s) de 10 centavos");
+        if (moedas5 > 0) System.out.println(moedas5 + " moeda(s) de 5 centavos");
+        if (moedas01 > 0) System.out.println(moedas01 + " moeda(s) de 1 centavo");*/
+		
+		// Atvidade 6
+		/*System.out.println("Digite um texto");
+		String texto = sc.nextLine();
+		
+		System.out.println("A quantidade de caracteres no texto é: " + texto.length());
+		System.out.println(texto.toUpperCase());*/
+		
+		//Atividade 7
+		/*System.out.println("Digite um nome");
+		String nome = sc.nextLine();
+		
+		String[] spt = nome.split(" ");
+		char[] ini = new char[spt.length];		
+		for(int i = 0; i < spt.length; i++) {
+			ini[i] = spt[i].charAt(0);
+		}
+		System.out.println("As iniciais são:");
+		for(int i = 0; i < ini.length; i++) {
+			System.out.print(ini[i]);
+		}*/
+		
+		
+		// Atividade 8 
+		/*System.out.println("Digite um texto");
+		String texto = sc.nextLine();
+		
+		String[] totalP = texto.split("[;,. ]");
+		
+		System.out.println("A quantidade de caracteres é :" + texto.length());
+		System.out.println("A quantidade de palavras é : " + totalP.length);*/
+ 
+	}
+
+}
