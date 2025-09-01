@@ -1,0 +1,19 @@
+select nome from filme where year(data_lancamento) between 1980 and 2000;
+
+select * from filme as f, staff_filme as sf, pessoa as p
+where f.id_filme = sf.id_filme and p.id_pessoa = sf.id_pessoa
+and p.nome like 'R%';
+
+select p.nome from pessoa as p, staff_filme as sf
+where p.id_pessoa = sf.id_pessoa and sf.id_funcao = 1;
+
+select p.nome from filme as f, pessoa as p, staff_filme as sf
+where f.id_filme = sf.id_filme and p.id_pessoa = sf.id_pessoa
+and f.nome = 'Matrix';
+
+select count(p.id_pessoa) from filme as f, pessoa as p, staff_filme as sf
+where f.id_filme = sf.id_filme and p.id_pessoa = sf.id_pessoa
+and f.nome = 'Matrix' 
+
+select * from filme order by nome desc;
+
